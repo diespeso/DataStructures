@@ -20,6 +20,7 @@ LinkedList::~LinkedList() {
 	}
 }
 
+/**Pushes a new Node with the given data at the end of the LinkedList*/
 void LinkedList::push(int data) {
 	if(isEmpty()) {
 		p_head = new Node(_counter, data);
@@ -62,6 +63,7 @@ void LinkedList::erase(int data) {
 
 }
 
+/**Deletes the las element of the LinkedList*/
 void LinkedList::pop() {
 	if(isEmpty()) {
 		throw NotPoppableException();
@@ -85,7 +87,7 @@ void LinkedList::pop() {
 	}
 }
 
-//Doesn't work yet
+/** Deletes all the elements on the LinkedList**/
 void LinkedList::clear() {
 	if(isEmpty()) {
 		return;
